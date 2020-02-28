@@ -1037,8 +1037,8 @@ mod tests {
     use serde_json::to_string;
 
     use super::{AudioMessageEventContent, MessageEventContent};
+    use crate::room::message::{InReplyTo, RelatesTo, TextMessageEventContent};
     use crate::EventResult;
-    use crate::room::message::{TextMessageEventContent, RelatesTo, InReplyTo};
     use ruma_identifiers::EventId;
     use std::convert::TryFrom;
 
@@ -1065,7 +1065,9 @@ mod tests {
             formatted_body: None,
             relates_to: Some(RelatesTo {
                 in_reply_to: InReplyTo {
-                    event_id: EventId::try_from("$15827405538098VGFWH:example.com").unwrap().to_owned(),
+                    event_id: EventId::try_from("$15827405538098VGFWH:example.com")
+                        .unwrap()
+                        .to_owned(),
                 },
             }),
         });
