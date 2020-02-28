@@ -1065,9 +1065,7 @@ mod tests {
             formatted_body: None,
             relates_to: Some(RelatesTo {
                 in_reply_to: InReplyTo {
-                    event_id: EventId::try_from("$15827405538098VGFWH:example.com")
-                        .unwrap()
-                        .to_owned(),
+                    event_id: EventId::try_from("$15827405538098VGFWH:example.com").unwrap(),
                 },
             }),
         });
