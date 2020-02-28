@@ -911,7 +911,7 @@ impl Serialize for NoticeMessageEventContent {
         state.serialize_field("msgtype", "m.notice")?;
 
         if self.relates_to.is_some() {
-            state.serialize_field("relates_to", &self.relates_to)?;
+            state.serialize_field("m.relates_to", &self.relates_to)?;
         }
 
         state.end()
@@ -985,7 +985,7 @@ impl Serialize for TextMessageEventContent {
         state.serialize_field("msgtype", "m.text")?;
 
         if self.relates_to.is_some() {
-            state.serialize_field("relates_to", &self.relates_to)?;
+            state.serialize_field("m.relates_to", &self.relates_to)?;
         }
 
         state.end()
